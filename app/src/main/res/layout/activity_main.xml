@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:paddingLeft="20dp"
+    tools:context="com.example.admin.mycalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Calculator"
+        android:textSize="30dp"
+        android:textColor="#ff0000"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="First Number"
+        android:layout_above="@+id/firstNumber"
+        android:layout_toStartOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/firstNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_above="@+id/textView2"
+        android:layout_alignStart="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second Number"
+        android:textSize="20dp"
+        tools:ignore="DuplicateIds"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/secondNumber"
+        android:layout_alignStart="@+id/firstNumber" />
+
+    <EditText
+        android:id="@+id/secondNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp">
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/result"
+            android:layout_alignBottom="@+id/result"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_weight="1"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/result"
+            android:layout_alignStart="@+id/firstNumber"
+            android:layout_below="@+id/textView1"
+            android:layout_weight="1"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnmul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btndiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp"
+        android:layout_marginEnd="11dp"
+        android:textSize="30dp"
+        android:textColor="#008000" />
+
+</LinearLayout>
